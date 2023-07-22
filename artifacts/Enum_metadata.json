@@ -16,9 +16,24 @@
 				"name": "get",
 				"outputs": [
 					{
-						"internalType": "enum Enum.WeekDay",
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "enum Enum.dutyDay",
 						"name": "",
 						"type": "uint8"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
 					}
 				],
 				"stateMutability": "view",
@@ -27,7 +42,38 @@
 			{
 				"inputs": [
 					{
-						"internalType": "enum Enum.WeekDay",
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					}
+				],
+				"name": "popChildAge",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_addr",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_age",
+						"type": "uint256"
+					}
+				],
+				"name": "pushChildAge",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Enum.dutyDay",
 						"name": "_day",
 						"type": "uint8"
 					},
@@ -35,6 +81,16 @@
 						"internalType": "address",
 						"name": "_add",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_age",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
 					}
 				],
 				"name": "set",
@@ -56,7 +112,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"maps.sol": "Enum"
+			"struct.sol": "Enum"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -70,12 +126,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"maps.sol": {
-			"keccak256": "0xf7449cc340829f8075507843b09e796fb4b3f854373470f53f998577a2b7be3c",
+		"struct.sol": {
+			"keccak256": "0x828ccfc8e9d0e79c1af10e940853e84306139ffbf221b2c8480b85fd3a29c350",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bb53c8a98d52224507938cc07998dd95eefc8428569d0033f1f28bc955700c12",
-				"dweb:/ipfs/QmXDRMgbzocPQQGo7K6m8tLG8bcCEqHv3epLxAJkxAg2LX"
+				"bzz-raw://4fd1d4fa23fb1beeb165ae10065474a745affb29ebba24dbf447375b83cf830c",
+				"dweb:/ipfs/Qme6imzDX2CSCxANNteCXCu3syujzb6da4uzATb9ggnwfu"
 			]
 		}
 	},
