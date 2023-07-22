@@ -22,6 +22,5 @@ contract ternary {
         else{
             return "value cannot be stored in uint8 or uint16";
         }
-
     }
 }
