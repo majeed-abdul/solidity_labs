@@ -16,7 +16,7 @@ contract Enum{
     function get (address _add) public view returns(WeekDay){
         return person[_add];
     }
-    function set (WeekDay _day,address _add) public {
+    function set (WeekDay _day,address _add) public  {
         person[_add]=_day;
     }
 }
