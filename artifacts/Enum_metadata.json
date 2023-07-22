@@ -1,0 +1,83 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_add",
+						"type": "address"
+					}
+				],
+				"name": "get",
+				"outputs": [
+					{
+						"internalType": "enum Enum.WeekDay",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "enum Enum.WeekDay",
+						"name": "_day",
+						"type": "uint8"
+					},
+					{
+						"internalType": "address",
+						"name": "_add",
+						"type": "address"
+					}
+				],
+				"name": "set",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"maps.sol": "Enum"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"maps.sol": {
+			"keccak256": "0xded49e109f7df8d25a190bfd5a9520165a8530fe6ddfdc37691d727e0da18886",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://88ffb563648fb8fbc50a8295c2396e0efdf66af07537de0de3e08f4749b4d67f",
+				"dweb:/ipfs/QmVZ39xGuEVmT1ae4N4a4V3GboUkDQ35yvip18B5LgPS7K"
+			]
+		}
+	},
+	"version": 1
+}
