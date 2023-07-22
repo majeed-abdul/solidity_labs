@@ -1,0 +1,122 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "valueEther",
+						"type": "uint256"
+					}
+				],
+				"name": "etherToGWei",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "valueEther",
+						"type": "uint256"
+					}
+				],
+				"name": "etherToWei",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "valueGwei",
+						"type": "uint256"
+					}
+				],
+				"name": "gweiToEther",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "valueWei",
+						"type": "uint256"
+					}
+				],
+				"name": "weiToEther",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"lab 8.sol": "Task1"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"lab 8.sol": {
+			"keccak256": "0x980d2643dc7f223ec43bd9bce7c2aa65452a73e72820078160399fc1f011d20a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://e4e9b757b92b2f1843cab22ba706be31662c4ea8349236a11152992e70fa4f91",
+				"dweb:/ipfs/Qmdp3oGZuXCVxBgwCo5akJPPmJtz1wzABd2qrmJRFxPR8E"
+			]
+		}
+	},
+	"version": 1
+}
