@@ -1,0 +1,78 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "arr",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getlength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"labs/31-7-23/05 arrayDeployAndObserve.sol": "DArray"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"labs/31-7-23/05 arrayDeployAndObserve.sol": {
+			"keccak256": "0x6972f1fbb373da0fa30d23a312a619a5ad988ecdaeaa493b7e314fef1792801d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://62175d0782344bdcbfae5f06cc9df39178e28c3d0b297f6c88d47970ee513ac7",
+				"dweb:/ipfs/QmRKwyT35hALYx9pY8LUmqiR6yaTsASnA12aXdz8DC4F6z"
+			]
+		}
+	},
+	"version": 1
+}
