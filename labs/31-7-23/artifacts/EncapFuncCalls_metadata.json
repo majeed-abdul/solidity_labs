@@ -1,0 +1,191 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "callFunc",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_y",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_z",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_a",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_b",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_c",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "callFuncWithKeyValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_y",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_z",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_a",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_b",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_c",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "y",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "z",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "a",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "b",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "c",
+						"type": "string"
+					}
+				],
+				"name": "someFuncWithManyInputs",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_y",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_z",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_a",
+						"type": "address"
+					},
+					{
+						"internalType": "bool",
+						"name": "_b",
+						"type": "bool"
+					},
+					{
+						"internalType": "string",
+						"name": "_c",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"labs/31-7-23/01 deployAndObseve.sol": "EncapFuncCalls"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"labs/31-7-23/01 deployAndObseve.sol": {
+			"keccak256": "0xa8ee4f15d03a3049946358deaa38a16fe43455ce26c47168f6a43e92e7b6fbc7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://faa177b665cefbf7fa4fe24a23f0d4b32df5c69da646e9d39d8193aa765e43c9",
+				"dweb:/ipfs/QmSVQKbyzR8Qzd5hzEzARKJ3gDE4QHdruoBBKtgZDsPZ3p"
+			]
+		}
+	},
+	"version": 1
+}
