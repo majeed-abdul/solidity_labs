@@ -31,8 +31,7 @@ contract ControlFlow {
         for (uint i=0;i<15;i++){
             sum +=i;        //  sum=sum+i
         }
-        return(sum);
-        
+        return(sum);        
     }
 
     function dowhileTest() public pure returns(uint256){
