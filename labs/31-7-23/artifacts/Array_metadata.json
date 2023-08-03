@@ -13,7 +13,7 @@
 						"type": "uint256"
 					}
 				],
-				"name": "MyArray",
+				"name": "array",
 				"outputs": [
 					{
 						"internalType": "int256",
@@ -25,34 +25,21 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
+				"inputs": [],
+				"name": "get",
+				"outputs": [
 					{
-						"internalType": "int256",
-						"name": "value",
-						"type": "int256"
+						"internalType": "int256[4]",
+						"name": "",
+						"type": "int256[4]"
 					}
 				],
-				"name": "add",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "deletee",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "length",
+				"name": "getlength",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -65,28 +52,9 @@
 			},
 			{
 				"inputs": [],
-				"name": "pop",
+				"name": "ipush",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "index",
-						"type": "uint256"
-					}
-				],
-				"name": "retrive",
-				"outputs": [
-					{
-						"internalType": "int256",
-						"name": "",
-						"type": "int256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -103,7 +71,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"labs/31-7-23/09 createContract.sol": "Array"
+			"labs/31-7-23/08 arraySomeErrors.sol": "Array"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -117,12 +85,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"labs/31-7-23/09 createContract.sol": {
-			"keccak256": "0xb747f25d3e4116c510b9e92b2a5d2b3c795acd9991160c85f8e03fe215caa947",
+		"labs/31-7-23/08 arraySomeErrors.sol": {
+			"keccak256": "0x592466f2357288ba62ed6d271ceac03dbeff889e679881487e0effd94a5d5d64",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://52a1f9ea760f23be82ac118d370435e214c4cf488159c640846581c404a9be5e",
-				"dweb:/ipfs/QmPYZjMerjvR5fV7ek7JfzWgyfZMEQjX4r6MFE6FMDm4w6"
+				"bzz-raw://34e49de4dce49be2e81bf95deca762fb4c184d467d3d915e1762c3a1d8d39e33",
+				"dweb:/ipfs/QmQC9CZNzW74yUbgkD29sEaYuQug56fS1LEwzau4sFhWn4"
 			]
 		}
 	},
