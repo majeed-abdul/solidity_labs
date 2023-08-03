@@ -64,6 +64,26 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "idelete",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "w1",
+				"outputs": [
+					{
+						"internalType": "enum Enum.WorkingDays",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -79,7 +99,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"labs/01-8-23/01 observeAndRun.sol": "Enum"
+			"labs/01-8-23/01 enum.sol": "Enum"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -93,12 +113,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"labs/01-8-23/01 observeAndRun.sol": {
-			"keccak256": "0x5f0d275c1b8820448cdcf84f30e58f15a65f96466e0bd87b90f1c0aefe842429",
+		"labs/01-8-23/01 enum.sol": {
+			"keccak256": "0x10d551bd3f7a8e850ad77b9cbe2e55e758bbd97c20388ef3589e4051960c8622",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a55f223fd06ba3d801301d5244da1c41e85345da17335a5c6613430453664c6f",
-				"dweb:/ipfs/Qmc1Bkrs5LCA1iVJpq3r9p2SncyRhxpjxyU2QJqPx1At4C"
+				"bzz-raw://1eefb1f94910f83f0e470f1a2e7644351fb3b726214f8715686cc21703a42bc2",
+				"dweb:/ipfs/QmWReXsks61VHrcvhMiKvMwXtjRDnCzrgJdCkbYYWxWyPr"
 			]
 		}
 	},

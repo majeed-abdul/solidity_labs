@@ -56,6 +56,24 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "_arr",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "newValue",
+						"type": "uint256"
+					}
+				],
+				"name": "updateArray",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -86,11 +104,11 @@
 	},
 	"sources": {
 		"labs/31-7-23/08 arraySomeErrors.sol": {
-			"keccak256": "0x592466f2357288ba62ed6d271ceac03dbeff889e679881487e0effd94a5d5d64",
+			"keccak256": "0x82e5d06ac808fda90a9924b4e267bf70237bc8e5501c8537f0181c00fac431d8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://34e49de4dce49be2e81bf95deca762fb4c184d467d3d915e1762c3a1d8d39e33",
-				"dweb:/ipfs/QmQC9CZNzW74yUbgkD29sEaYuQug56fS1LEwzau4sFhWn4"
+				"bzz-raw://63c167d3448de6717220bbe72e97be11c1182d73cdba31bb12b6fa2b3568713e",
+				"dweb:/ipfs/QmTKt1owZfxFAikjUDrBcWzgZSVWPqoxdiUF2jZtorvYvm"
 			]
 		}
 	},
