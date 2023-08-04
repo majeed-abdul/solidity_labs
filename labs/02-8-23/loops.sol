@@ -15,7 +15,7 @@ contract Loop {
 }
 
 contract ControlFlow {
-
+ uint public x;
     function whileTest() public pure returns(uint256){
         uint sum = 0;
         uint i = 0;
@@ -26,12 +26,13 @@ contract ControlFlow {
         return(sum);
     }
 
-    function forTest() public pure returns(uint256){
-        uint sum = 0;
-        for (uint i=0;i<15;i++){
-            sum +=i;        //  sum=sum+i
-        }
-        return(sum);        
+    function forTest() public{
+       
+        for(uint i = 2; i == 0; i--){
+            for(uint j = 1; j != 0; j--){
+                x++;
+            }
+        }     
     }
 
     function dowhileTest() public pure returns(uint256){
