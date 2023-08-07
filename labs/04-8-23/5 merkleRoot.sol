@@ -7,7 +7,7 @@ contract MerkleTree {
     // Sum(H1,H2) Sum(H3,H4)
     // / \ / \
     // H1 H2 H3 H4
-    uint256[] arr = [1,1,1,1,1,1,1,1,1];
+    uint256[] arr = [1,1,1,1,1,1,1,1];
 
     function add() public {
         if (arr.length % 2 == 1) {
