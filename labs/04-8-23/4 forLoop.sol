@@ -57,11 +57,10 @@ contract Factorial {
         if (n == 0) {
             factvalue = 1;
             return factvalue;
-        }
-        else{
-            factvalue=1;
-            for(uint i=n;i>0;i--){
-                factvalue*=i;
+        } else {
+            factvalue = 1;
+            for (uint256 i = n; i > 0; i--) {
+                factvalue *= i;
             }
         }
         return factvalue;
