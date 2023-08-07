@@ -39,7 +39,6 @@ contract PizzaDeli{
     PizaOrder public P1;
     PizaOrder public P2 = PizaOrder.Preparing;  //  Using method 1
     PizaOrder public P3 = PizaOrder(3);         //  Using method 2 
-
     function p1Setter(PizaOrder _value) public{ //  Setter for P1
         P1=_value;
     }
@@ -47,6 +46,7 @@ contract PizzaDeli{
     function GetterAll() public view returns(PizaOrder,PizaOrder,PizaOrder){    //  All Getter
         return (P1,P2,P3);
     }
+
 
 
 
