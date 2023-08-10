@@ -11,6 +11,8 @@ contract Enum{
     Exam public e2 = Exam.Scholarship;
     Exam public e3 = Exam(2); // it returns the value 2=Fail
 
+    mapping(Exam=>Exam) a;
+
     function Fail() public{
         if(e1 == Exam.Checking){    // e1 to Fail, only if ‘e1’ is in the Checking state
             e1 = Exam.Fail;
