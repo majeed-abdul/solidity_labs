@@ -45,3 +45,25 @@ contract ZeroAddress{
         }
     }
 }
+contract NoPrime {
+    uint public num;
+    event PrimeChecker(string, uint);
+    function setter(uint _inputNum) public{
+        num=_inputNum;
+    }
+    function check(uint number) public {
+       if (PrimeNo(number)){
+           emit PrimeChecker("The Number is Prime", number);
+        }else{
+            emit PrimeChecker("The Number is not Prime", number);
+        } 
+    }
+    function PrimeNo(uint n) private pure returns(bool){
+        for(uint i=2 ; i < n/2 ; i++) {
+            if(n%i == 0) {                
+                return false;
+            }
+        }
+        return true;
+    }
+}
