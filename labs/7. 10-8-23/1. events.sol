@@ -36,5 +36,12 @@ contract PersonContract {
         P1=PersonInfo(_name,_age);
         emit Update(oldValue, P1, block.timestamp, block.number);
     }
-
+}
+contract ZeroAddress{
+    event ZeroAddressInputted(string message);
+    constructor(address _initialOwner){
+        if (_initialOwner==0x0000000000000000000000000000000000000000){
+            emit ZeroAddressInputted("Zero Address inputted on deployment of contract");
+        }
+    }
 }
