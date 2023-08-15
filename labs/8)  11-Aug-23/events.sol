@@ -52,6 +52,6 @@ contract PersonContract{
         string name;
         uint age;
     }
-    event Update(PersonInfo oldValue,PersonInfo newValue,uint256 timestamp,uint256 blockNumber);
-    PersonInfo public P1;
+    event Update(PersonalInfo oldValue,PersonalInfo newValue,uint256 timestamp,uint256 blockNumber);
+    PersonalInfo public P1;
 }
