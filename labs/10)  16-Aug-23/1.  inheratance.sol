@@ -58,14 +58,14 @@ pragma solidity ^0.8.17;
 contract BaseUser{
     address public address1=0x472EbDcBB17076a3724C2bF14F234edD43103820;
     error print1(address);
-    function Print()virtual public view{
+    function Print()public virtual  view{
         revert print1(address1);
     }
 }
 contract Moderator is BaseUser{
     string public name="majeed";     
     error print2(address,string);
-    function Print() virtual override public view{
+    function Print()virtual  override  public  view{
         revert print2(address1,name);
     }
 }
