@@ -65,7 +65,7 @@ contract StudentRegSystem {
         return top3;
     }
     function top3Achivers()public {
-        uint[] memory _arr;
+        uint[] memory _arr=new uint[](studentLength);
         for(uint j=0;j<_arr.length;j++){
             for (uint k=0;k<_arr.length-1;k++){
                 if(allStudents[_arr[k]].obtainedMarks<allStudents[_arr[k+1]].obtainedMarks){
@@ -79,10 +79,4 @@ contract StudentRegSystem {
         top3[1]=_arr[1];
         top3[2]=_arr[2];
     }
-        // uint f;
-        // uint s;
-        // uint t;
-        // for (uint i=1;i<=studentLength;i++){
-        //     if(allStudents[i].obtainedMarks)
-        // }
 }
