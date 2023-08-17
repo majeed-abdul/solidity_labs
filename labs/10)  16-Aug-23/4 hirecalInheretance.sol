@@ -112,11 +112,11 @@ contract BMW is Car {
 
     function temp() public virtual override {
         emit Log("BMW temp called");
-        super.temp();
+        // super.temp();
     }
 }
 
-contract Supra is TOYOTA, BMW {
+contract Supra is BMW,TOYOTA {
     function demo() public override(TOYOTA, BMW) {
         super.demo();
     }
