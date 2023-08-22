@@ -26,7 +26,7 @@ contract PrimeChecker {
     }
 
     function onlyPrime(uint256 b) external pure returns (bool success) {
-        // revert when a non-prime number is entered
+        // revert when a non-prime number is enteredd
         require(isPrime(b), "Ups! Reverting");
         success = true;
     }
@@ -67,21 +67,25 @@ contract TryCatch {
     }
 }
 contract SimpleDivision{
-    event Answer(uint);
-    function Div2Nums(uint p,uint q)public{
-        emit Answer(p/q);
+    function Div2Nums(uint p,uint q)public pure returns(uint){
+        // require(q!=0,"Invalid Denominator entered");
+        return p/q;
     }
 }
 contract TryCatchDivision  {    
     event SuccessEvent();
+    event CatchPanic(uint errorCode);
     event CatchEvent(string message);
     event CatchByte(bytes data);
     SimpleDivision d;
-    function Div2Nums(uint p,uint q)public{
-        try d.Div2Nums(p, q){
+    function Div2Nums(uint p,uint q)public returns(uint result){
+        try d.Div2Nums(p, q) returns(uint _result){
             emit SuccessEvent();
+            return _result;
         } catch Error(string memory reason) {
             emit CatchEvent(reason);
+        } catch Panic(uint reason) {
+            emit CatchPanic(reason);
         } catch (bytes memory reason) {
             emit CatchByte(reason);
         }
