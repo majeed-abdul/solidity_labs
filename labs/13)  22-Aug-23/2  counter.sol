@@ -16,6 +16,7 @@ interface ICounter {
 }
 
 contract MyContract {
+    
     function squareCounter(address _counter) external {
         ICounter(_counter).square();
     }
