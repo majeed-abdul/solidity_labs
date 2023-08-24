@@ -14,6 +14,7 @@ contract Base {
 }
 
 contract Derived is Base(2) {
+    uint x=10;
     constructor() {}
 
     function getData() external view returns (uint256) {
@@ -21,8 +22,8 @@ contract Derived is Base(2) {
         return result;
     }
 
-    function Print() public virtual override returns (string memory) {
-        return "Direct Initialization";
+    function Print() public override pure returns (string memory) {
+        return ("Direct Initialization");
     }
 }
 
@@ -42,7 +43,7 @@ contract Derived2 is Base {
 contract Caller {
     Derived c = new Derived();
 
-    function getResult() public returns (uint256) {
+    function getResult() public view returns (uint256) {
         c.Print();
         return c.getData();
     }

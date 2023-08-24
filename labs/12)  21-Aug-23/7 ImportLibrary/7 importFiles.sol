@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 // import Foo.sol from current directory
-import "./Callee.sol";
+import "./abc/Callee.sol";
 
 contract Import {
     Callee public demo = new Callee();
