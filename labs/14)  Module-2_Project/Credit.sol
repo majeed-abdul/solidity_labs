@@ -15,7 +15,7 @@ contract Credit is Ownable {
     uint reypaymentInstallment;
     uint requestedDate;
     uint lastRepaymentDate;
-    bytes discription;
+    string discription;
     bool active=true;
     uint lendersCount=0;
     uint revokeVotes=0;
@@ -89,7 +89,7 @@ contract Credit is Ownable {
         require(state==State.revoke);
         _;
     }
-    constructor(uint _requestedAmount,uint _requestedRepaymemts,uint _intrest,bytes memory _discription){
+    constructor(uint _requestedAmount,uint _requestedRepaymemts,uint _intrest,string memory _discription){
         borrower=tx.origin;
         intrest=_intrest;
         requestedAmount=_requestedAmount;
