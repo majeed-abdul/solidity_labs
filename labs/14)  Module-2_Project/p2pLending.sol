@@ -18,10 +18,10 @@ contract PeerToPeerLending is Ownable{
     event LogCreditStateChanged(address indexed _address,Credit.State indexed _state,uint indexed _timeStamp);
     event LogCreditActiveChanged(address indexed _address,bool indexed active,uint indexed _timeStamp);
     event LogUserSetFraud(address indexed _address,bool _fraudStatus,uint indexed _timeStamp);
-    function applyForCredit(uint _requestedAmount,uint _repaymentCounts,uint _intrest,bytes memory _creditDiscription)
+    function applyForCredit(uint _requestedAmount,uint _repaymentCounts,uint _intrest,string memory _creditDiscription)
     public returns(address _credits){
         require(users[msg.sender].credited==false);
-        require(users[msg.sender].fraudStatus==true);
+        require(users[msg.sender].fraudStatus==false);
         assert(users[msg.sender].activeCredit==address(0));
         users[msg.sender].credited==true;
         Credit credit=new Credit(_requestedAmount,_repaymentCounts,_intrest,_creditDiscription);
