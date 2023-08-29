@@ -12,7 +12,7 @@ contract Credit is Ownable {
     uint intrest;
     uint requestedRepaymemts;
     uint remainingRepayments;
-    uint reypaymentInstallment;
+    uint repaymentInstallment;
     uint requestedDate;
     uint lastRepaymentDate;
     string discription;
@@ -96,7 +96,7 @@ contract Credit is Ownable {
         requestedRepaymemts=_requestedRepaymemts;
         remainingRepayments=_requestedRepaymemts;
         returnAmount=requestedAmount.add(intrest);
-        reypaymentInstallment=returnAmount.div(requestedRepaymemts);
+        repaymentInstallment=returnAmount.div(requestedRepaymemts);
         discription=_discription;
         requestedDate=block.timestamp;
         emit LogCreditInitialized(borrower,requestedDate);        
