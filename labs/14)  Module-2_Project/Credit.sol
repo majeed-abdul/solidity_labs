@@ -131,4 +131,6 @@ contract Credit is Ownable {
         lendersInvestedAmount[msg.sender]=lendersInvestedAmount[msg.sender].add(msg.value.sub(extraMoney));
         emit LogLenderInvestment(msg.sender, msg.value.sub(extraMoney), block.timestamp);
     }
+    function repay()public onlyBorrower canRepay payable {
+    } 
 }
