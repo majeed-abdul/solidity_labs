@@ -132,6 +132,28 @@ contract Credit is Ownable {
         emit LogLenderInvestment(msg.sender, msg.value.sub(extraMoney), block.timestamp);
     }
     function repay()public onlyBorrower canRepay payable {
-        
+        require(remainingRepayments > 0);
+        require(msg.value >= repaymentInstallment);
+        assert(rePaidAmount<returnAmount);
+        remainingRepayments--;
+        lastRepaymentDate=block.timestamp;
+        uint extraMoney=0;
+        if (msg.value>repaymentInstallment){
+            extraMoney=msg.value.sub(repaymentInstallment);
+            assert(repaymentInstallment==msg.value.sub(extraMoney));
+            assert(extraMoney<=msg.value);
+            payable(msg.sender).transfer(extraMoney);
+            emit LogBorrowerChangeReturned(msg.sender, extraMoney, block.timestamp);
+        }
+        emit LogBorrowerRepaymentInstallment(msg.sender, msg.value.sub(extraMoney), block.timestamp);
+        rePaidAmount=rePaidAmount.add(msg.value.sub(extraMoney));
+        if(rePaidAmount==returnAmount){
+            emit LogBorrowerRepaymentFinished(msg.sender, block.timestamp);
+            state=State.intrestReturns;
+            emit logCreditStateChanged(state, block.timestamp);
+        }
     } 
+    function wirhdraw()public isActive onlyBorrower canWithdraw isNotFraud{
+        
+    }
 }
