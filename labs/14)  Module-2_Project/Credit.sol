@@ -187,6 +187,34 @@ contract Credit is Ownable {
         );
     }
     function revokeVote()public isActive isRevokable onlyLender {
-        require(condition);
+        require(revokeVoters[msg.sender]==false);
+        revokeVotes++;
+        revokeVoters[msg.sender]==true;
+        emit LogLenderVoteForRevoking(msg.sender, block.timestamp);
+        if(lendersCount==revokeVotes){
+            revoke();
+        }
+    }
+    function revoke()internal{
+        state=State.revoke;
+        emit logCreditStateChanged(state, block.timestamp);
+
+    }
+    function Refund()public isActive onlyLender isRevoked{
+        assert(address(this).balance>=lendersInvestedAmount[msg.sender]);
+        payable (msg.sender).transfer(lendersInvestedAmount[msg.sender]);
+        emit LogLenderRefunded(msg.sender, lendersInvestedAmount[msg.sender], block.timestamp);
+        if(address(this).balance==0){
+            active=false;
+            emit LogCreditStateActiveChanged(active, block.timestamp);
+            state=State.expired;
+            emit logCreditStateChanged(state, block.timestamp);
+        }
+    }
+    function fraudVote()public isActive onlyLender{
+        require(fraudVoters[msg.sender]==false);
+        fraudVotes++;
+        fraudVoters[msg.sender]=true;
+        emit LogLenderVoteForFraud(msg.sender, block.timestamp);
     }
 }
