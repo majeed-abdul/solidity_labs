@@ -154,6 +154,39 @@ contract Credit is Ownable {
         }
     } 
     function wirhdraw()public isActive onlyBorrower canWithdraw isNotFraud{
-        
+        state=State.repayment;
+        emit logCreditStateChanged(state, block.timestamp);
+        payable (borrower).transfer(address(this).balance);
+        emit LogBorrowerWithdrawal(msg.sender,address(this).balance, block.timestamp);
+    }
+    function requestInterest() public isActive onlyLender canAskForInterest{
+        uint lenderReturnAmount=lendersInvestedAmount[msg.sender].mul(returnAmount.div(lendersCount).div(lendersInvestedAmount[msg.sender]));
+        assert(address(this).balance>=lenderReturnAmount);
+        payable (msg.sender).transfer(lenderReturnAmount);
+        emit LogLenderWithdrawal(msg.sender, lenderReturnAmount, block.timestamp);
+        if (address(this).balance==0){
+            active=false;
+            emit LogCreditStateActiveChanged(active, block.timestamp);
+            state=State.expired;
+            emit logCreditStateChanged(state, block.timestamp);
+        }
+    }
+    function getCreditInfo() public view returns(address,string memory,uint,uint,uint,uint,uint,uint,State,bool,uint){
+        return (
+            borrower,
+            discription,
+            requestedAmount,
+            requestedRepaymemts,
+            repaymentInstallment,
+            remainingRepayments,
+            intrest,
+            returnAmount,
+            state,
+            active,
+            address(this).balance
+        );
+    }
+    function revokeVote()public isActive isRevokable onlyLender {
+        require(condition);
     }
 }
